@@ -16,6 +16,7 @@ const winnerImg = document.getElementById('winner-img');
 const equalsImg = document.getElementById('equals-img');
 const answers = [answer1, answer2, answer3, answer4];
 const container = document.getElementById('container');
+const container2 = document.getElementById('container2');
 const fullRoom = document.getElementById('fullRoom');
 const good = document.getElementById('good');
 const bad = document.getElementById('bad');
@@ -59,6 +60,7 @@ const socket = io();
 
 socket.on('salaLlena',() => {
   container.style.display='none';
+  container2.style.display='none';
   fullRoom.style.display='inline';
   fullRoom.style.visibility='visible';
 
