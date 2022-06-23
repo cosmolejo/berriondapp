@@ -3,8 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
 :root {
-	--dark-color-a: #a73313c0;
-	--dark-color-b: #cf4620b6;
+	--dark-color-a: #397463ab;
+	--dark-color-b: #3d9175c0;
 	--message-color: #0d0d0e;
 	--success-color: #5cb85c;
 	--error-color: #d9534f;
@@ -21,7 +21,7 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
-	background: var(--light-color);
+	background: #242c34;
 	margin: 10px;
 }
 
@@ -35,7 +35,6 @@ a {
 
 .container {
 	max-width: 1200px;
-	height: 520px;
 	padding-right: 5px;
 	padding-left: 5px;
 	margin-right: 5px;
@@ -48,6 +47,7 @@ a {
 input {
 	width: 150px;
 	margin-bottom: 5px;
+	margin-left: 5px;
 }
 
 .join-btn {
@@ -78,16 +78,16 @@ input {
 	padding-left: 30px;
 	padding-left: 10px;
 	grid-area: image1;
-	width: 400px;
-	height: 400px;
+	width: 450px;
+	height: auto;
 }
 
 .image2 {
 	margin-top: 45px;
 	padding-left: 10px;
 	grid-area: image2;
-	width: 350px;
-	height: 350px;
+	width: 450px;
+	height: auto;
 }
 
 .image2 {
@@ -106,7 +106,7 @@ input {
 	font-size: 23px;
 	font-family: 'Henny Penny', cursive;
 	padding: 1px;
-	background: var(--dark-color-a);
+	background: #397463ab;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 }
@@ -114,7 +114,7 @@ input {
 .join-main {
 	font-family: 'Oswald', sans-serif;
 	padding: 30px 40px;
-	background: var(--dark-color-b);
+	background: #3d9175c0;
 }
 
 .join-main p {
@@ -183,7 +183,7 @@ input {
 }
 
 .footer-authors {
-	margin-left: 10px;
+	margin-left: 5px;
 	font-family: 'Oswald', sans-serif;
 	text-align: left;
 	font-weight: normal;
@@ -220,16 +220,16 @@ input {
 	visibility: hidden;
 	display: none;
 	font-family: 'Oswald', sans-serif;
-	color: black;
+	color: rgb(241, 239, 239);
 }
 
 .grid-container {
-	justify-content: center;
+	justify-content: left;
 	display: grid;
-	grid-template-columns: 150px 150px 150px 150px 150px;
-	grid-template-rows: 150px 200px 150px;
-	gap: 5px 5px;
-	grid-template-areas: "user1 game game game user3" ". game game game ." "user4 game game game user2";
+	grid-template-columns: 160px 160px 550px;
+	grid-template-rows: 160px 160px;
+	gap: 10px 10px;
+	grid-template-areas: "user1 user2 game" "user3 user4 game" ;
 }
 
 .user1 {
@@ -237,10 +237,10 @@ input {
 	border-style: solid;
 	border-color: var(--margin-color);
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
 	gap: 0px 0px;
-	grid-template-areas: "name name name" "avatar-otter avatar-otter avatar-otter" "points points points";
+	grid-template-areas: "name" "avatar-otter" "points";
 	grid-area: user1;
 }
 
@@ -255,14 +255,15 @@ input {
 }
 
 .user2 {
+	background-color:var(--ligth-color);
 	grid-area: user2;
 	border-style: solid;
 	border-color: var(--margin-color);
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
 	gap: 0px 0px;
-	grid-template-areas: "name name name" "avatar-raccoon avatar-raccoon avatar-raccoon" "points points points";
+	grid-template-areas: "name" "avatar-raccoon" "points";
 	grid-area: user2;
 }
 
@@ -277,14 +278,15 @@ input {
 }
 
 .user3 {
+	background-color:var(--ligth-color);
 	grid-area: user3;
 	border-style: solid;
 	border-color: var(--margin-color);
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
 	gap: 0px 0px;
-	grid-template-areas: "name name name" "avatar-pig avatar-pig avatar-pig" "points points points";
+	grid-template-areas: "name" "avatar-pig" "points";
 	grid-area: user3;
 }
 
@@ -299,14 +301,15 @@ input {
 }
 
 .user4 {
+	background-color:var(--ligth-color);
 	grid-area: user4;
 	border-style: solid;
 	border-color: var(--margin-color);
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
 	gap: 0px 0px;
-	grid-template-areas: "name name name" "avatar-sheep avatar-sheep avatar-sheep" "points points points";
+	grid-template-areas: "name" "avatar-sheep" "points";
 	grid-area: user4;
 }
 
@@ -322,12 +325,14 @@ input {
 
 .answer {
 	grid-area: answer;
-	width: 70px;
-	height: 70px;
+	width: 22px;
+	height: 22px;
 	display: 'none';
 	padding: 0px;
-	margin: 0px;
+	margin: -10px;
+	margin-left: 150px;
 }
+
 
 #bad{
 	padding: 2px;
@@ -366,7 +371,7 @@ input {
 	background-image: url("/img/board.png");
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: auto;
+	background-size: 100%;
 	color: var(--ligth-color);
 	font-family: 'Oswald', sans-serif;
 	font-size: 16px;
@@ -386,8 +391,8 @@ input {
 }
 
 #equals-img {
-	height: 300px;
-	width: 300px;
+	height: 160px;
+	width: 160px;
 }
 
 #question{
@@ -420,7 +425,6 @@ input {
 }
 
 #play{
-	margin-left:50px ;
 	position:relative;
 }
 
@@ -436,7 +440,7 @@ input {
 	font-family: 'Oswald', sans-serif;
 	text-align: right;
 	font-weight: normal;
-	margin-left: 830px;
+	margin-left: 750px;
 }
 
 /*End Game container*/
@@ -457,7 +461,6 @@ input {
 	font-weight: 200;
 	background: var(--dark-color-b);
 	color: var(--ligth-color);
-	height: 510px;
 	text-align: left;
 	padding: 5px;
 	border-radius: 10px;
@@ -507,7 +510,6 @@ input {
 
 .div.col-2 {
 	padding: 0px 0px;
-	height: 510px;
 	max-width: 783.328px;
 }
 
@@ -544,11 +546,15 @@ input {
 }
 
 .chat-form-container {
-	border-radius: 10px;
+	display: inline;
+	border-radius: 2px;
 	font-family: 'Oswald', sans-serif;
 	font-weight: 200;
 	padding: 10px 5px;
-	height: 510px;
+	margin-bottom: 20px;
+	margin-left: 60px;
+	margin-right: 60px;
+	height: 200px;
 	background-color: var(--dark-color-b);
 	display: grid;
 	border-width: 3px;

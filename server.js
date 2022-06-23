@@ -16,7 +16,7 @@ const salasEnJuego = {'Geography': 0, 'Sports': 0, 'History': 0, 'Politics': 0, 
 server.listen(process.env.PORT || 3000);
 console.log('Servidor en ejecucion...');
 app.use(express.static(path.join(__dirname, 'public')));
-const botName = 'QuizUP';
+const botName = 'ElBerriondo';
 
 // Join user to chat
 function userJoin(id, username, room, puntaje, flag) {
@@ -54,7 +54,7 @@ io.on('connection', socket => {
       socket.join(user.room);
 
       // Welcome current user
-      socket.emit('message', formatMessage(botName, 'Welcome to QuizUp!'));
+      socket.emit('message', formatMessage(botName, 'Welcome to BerriondApp'));
       if (getRoomUsers(user.room).length >= 2) {
         io.in(user.room).emit('readyToPlay', false);
       };
